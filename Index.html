@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexa Skills Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Nexa <span>Skills</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#eligibility">Eligibility</a>
+                <a href="#fees">Fees</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button id="darkModeBtn">🌙</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO NEXA SKILLS ACADEMY</p>
+
+            <h1>
+                Learn Skills.<br>
+                <span>Build Your Future.</span>
+            </h1>
+
+            <p>
+                Master in-demand digital skills with practical training,
+                expert guidance and career-focused learning.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#courses" class="btn primary-btn">
+                    Explore Courses
+                </a>
+
+                <a href="#eligibility" class="btn secondary-btn">
+                    Check Eligibility
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Courses -->
+    <section id="courses" class="section">
+
+        <div class="section-heading">
+            <p>OUR PROGRAMS</p>
+            <h2>Popular Courses</h2>
+            <span>
+                Choose a skill and start building your future.
+            </span>
+        </div>
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <div class="course-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>
+                    Learn HTML, CSS, JavaScript and build modern websites.
+                </p>
+                <strong>Rs. 5,000 / Month</strong>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🎨</div>
+                <h3>Graphic Design</h3>
+                <p>
+                    Learn professional graphic design and creative tools.
+                </p>
+                <strong>Rs. 4,000 / Month</strong>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🤖</div>
+                <h3>AI Course</h3>
+                <p>
+                    Explore Artificial Intelligence and modern AI tools.
+                </p>
+                <strong>Rs. 7,000 / Month</strong>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🚀</div>
+                <h3>Freelancing</h3>
+                <p>
+                    Learn how to start freelancing and find online work.
+                </p>
+                <strong>Rs. 3,500 / Month</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Eligibility Checker -->
+    <section id="eligibility" class="section checker-section">
+
+        <div class="section-heading">
+            <p>ADMISSIONS</p>
+            <h2>Student Eligibility Checker</h2>
+            <span>Check your admission eligibility instantly.</span>
+        </div>
+
+        <div class="checker-box">
+
+            <form id="eligibilityForm">
+
+                <label>Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                >
+
+                <label>Marks Percentage</label>
+                <input
+                    type="number"
+                    id="marks"
+                    placeholder="Enter marks percentage"
+                    min="0"
+                    max="100"
+                >
+
+                <label>Select Course</label>
+
+                <select id="course">
+                    <option value="">Select a course</option>
+                    <option>Web Development</option>
+                    <option>Graphic Design</option>
+                    <option>AI Course</option>
+                    <option>Freelancing</option>
+                </select>
+
+                <button type="submit" class="btn primary-btn">
+                    Check Eligibility
+                </button>
+
+            </form>
+
+            <div id="eligibilityResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Fee Calculator -->
+    <section id="fees" class="section">
+
+        <div class="section-heading">
+            <p>FEE CALCULATOR</p>
+            <h2>Calculate Your Course Fee</h2>
+            <span>Get your discounted fee instantly.</span>
+        </div>
+
+        <div class="calculator-box">
+
+            <label>Select Course</label>
+
+            <select id="feeCourse">
+                <option value="">Select a course</option>
+                <option value="5000">Web Development</option>
+                <option value="4000">Graphic Design</option>
+                <option value="7000">AI Course</option>
+                <option value="3500">Freelancing</option>
+            </select>
+
+
+            <label>Duration</label>
+
+            <select id="duration">
+                <option value="">Select duration</option>
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="12">12 Months</option>
+            </select>
+
+
+            <button onclick="calculateFee()" class="btn primary-btn">
+                Calculate Fee
+            </button>
+
+
+            <div id="feeResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Extra Feature: Why Choose Us -->
+    <section class="section features">
+
+        <div class="section-heading">
+            <p>WHY NEXA?</p>
+            <h2>Why Choose Our Academy?</h2>
+        </div>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <span>🎯</span>
+                <h3>Practical Learning</h3>
+                <p>Learn through real projects and practical exercises.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>👨‍🏫</span>
+                <h3>Expert Guidance</h3>
+                <p>Get guidance throughout your learning journey.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>🏆</span>
+                <h3>Career Focused</h3>
+                <p>Build skills that can help you move toward your career goals.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+        <h2>Ready to Start Learning?</h2>
+
+        <p>
+            Take the first step toward your digital career today.
+        </p>
+
+        <a
+            href="https://wa.me/923007848606"
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            💬 Contact Us on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>Nexa Skills Academy</h3>
+        <p>Learn Skills. Build Your Future.</p>
+        <p>© 2026 Nexa Skills Academy. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
